@@ -12,11 +12,25 @@ https://github.com/szazo/DHT11_Python.git
 The Watson IoT Python SDK is located here:
 https://github.com/ibm-watson-iot/iot-python
 ```console
-pip install wiotp-sdk
+sudo pip3 install wiotp-sdk
 ```
 
 To learn about other Watson IoT SDK's, please see here:
 https://github.com/ibm-watson-iot
+
+## Raspberry PI Setup and Prerequisits
+
+1. Verify you have "python version 3"
+
+```console
+python3 --version
+```
+
+2. You may need to install some Python packages as pre-requisites.  Here are some:
+
+```console
+sudo pip3 install paho-mqtt
+```
 
 
 ## Step 1:  Wire the DHT 11 Sensor to your PI
@@ -36,7 +50,7 @@ Some hints:
 Run the following command to verify that you are receiving values:
 
 ```console
-python dht11_example.py
+python3 dht11_example.py
 ```
 
 Verify that the temperature and humidity readings are displayed.
@@ -96,7 +110,7 @@ client = wiotp.sdk.device.DeviceClient(config=myConfig)
  
 
 ```console
-python iot-temp.py
+python3 iot-temp.py
 ```
 
 ## Step 8:  Monitor Results in Watson IoT
